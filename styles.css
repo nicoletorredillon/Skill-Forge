@@ -187,6 +187,47 @@ section p {
 
 /* MOBILE */
 
+/* DATA ANALYTICS PROGRESSION PATH */
+
+.analytics-path {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* LOCKED FUTURE SKILLS */
+
+.skill-node.locked {
+    opacity: 0.42;
+
+    background: rgba(7, 11, 8, 0.75);
+    border-color: #465047;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 0, 0, 0.35),
+        0 8px 25px rgba(0, 0, 0, 0.35);
+
+    filter: grayscale(0.65);
+}
+
+.skill-node.locked h3,
+.skill-node.locked .skill-icon {
+    color: #7c857d;
+}
+
+.skill-node.locked:hover {
+    transform: none;
+}
+
+.locked-connector {
+    opacity: 0.35;
+    background: linear-gradient(
+        to bottom,
+        #536b50,
+        #303831
+    );
+}
+
 @media (max-width: 800px) {
     .skill-row {
         flex-direction: column;
