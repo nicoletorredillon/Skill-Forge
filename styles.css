@@ -87,3 +87,109 @@ section p {
     font-size: 1.05rem;
     line-height: 1.7;
 }
+
+
+/* SKILL TREE */
+
+.skill-tree {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-node {
+    width: 220px;
+    padding: 22px 18px;
+    text-align: center;
+
+    background: rgba(10, 20, 14, 0.9);
+    border: 1px solid #536b50;
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.4);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.skill-node:hover {
+    transform: translateY(-5px);
+}
+
+.skill-node h3 {
+    margin: 8px 0 5px;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+}
+
+.skill-node p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.skill-icon {
+    display: block;
+    font-size: 1.8rem;
+}
+
+/* COMPLETED SKILLS */
+
+.skill-node.completed {
+    border-color: #d6b96c;
+
+    box-shadow:
+        0 0 18px rgba(214, 185, 108, 0.15),
+        0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.skill-node.completed h3,
+.skill-node.completed .skill-icon {
+    color: #d6b96c;
+}
+
+/* CURRENTLY ACTIVE PATH */
+
+.skill-node.active {
+    border-color: #6fa86b;
+
+    box-shadow:
+        0 0 22px rgba(111, 168, 107, 0.28),
+        0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.skill-node.active h3,
+.skill-node.active .skill-icon {
+    color: #8bc786;
+}
+
+/* TREE CONNECTION */
+
+.connector {
+    width: 2px;
+    height: 45px;
+    background: linear-gradient(
+        to bottom,
+        #d6b96c,
+        #536b50
+    );
+}
+
+.skill-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+    .skill-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
